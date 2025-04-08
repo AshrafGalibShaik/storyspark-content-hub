@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
               <Button variant="outline" className="flex-1" asChild>
                 <Link to="/login" onClick={() => setIsMenuOpen(false)}>Login</Link>
               </Button>
-              <Button className="flex-1 bg-teal hover:bg-teal/90 text-white" asChild>
+              <Button className="flex-1 bg-teal hover:bg-black/90 text-black" asChild>
                 <Link to="/register" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
               </Button>
             </div>
