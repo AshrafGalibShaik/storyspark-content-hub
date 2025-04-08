@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import PostCard from '@/components/PostCard';
 import TagsCloud from '@/components/TagsCloud';
 import { posts } from '@/lib/data';
-import { Search } from 'lucide-react';
+import { Search, Edit } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
@@ -47,15 +47,23 @@ const Posts = () => {
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
               Explore articles on design, technology, travel, food, productivity and more from our community of storytellers.
             </p>
-            <div className="max-w-lg mx-auto relative">
-              <Input
-                type="search"
-                placeholder="Search for articles, topics, or authors..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white"
-              />
-              <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
+              <div className="max-w-lg w-full relative">
+                <Input
+                  type="search"
+                  placeholder="Search for articles, topics, or authors..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white w-full"
+                />
+                <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
+              </div>
+              <Button asChild className="bg-teal hover:bg-teal/90 text-white whitespace-nowrap">
+                <Link to="/write" className="flex items-center">
+                  <Edit size={18} className="mr-2" />
+                  Write Article
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -65,7 +73,7 @@ const Posts = () => {
           <div className="flex flex-col md:flex-row gap-8">
             {/* Sidebar */}
             <aside className="md:w-1/4">
-              <div className="sticky top-6">
+              <div className="sticky top-24">
                 <TagsCloud className="mb-8" />
                 
                 <div className="bg-light-gray/30 p-6 rounded-lg">

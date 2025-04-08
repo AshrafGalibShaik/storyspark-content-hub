@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
               </Link>
               <Link 
                 to="/posts" 
-                className="btn-secondary flex items-center justify-center"
+                className="bg-white text-teal border-2 border-teal hover:bg-teal/10 font-medium py-2 px-4 rounded-md transition-colors flex items-center justify-center"
               >
                 Explore Articles
               </Link>
@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-teal/20 rounded-full z-0"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-coral/20 rounded-full z-0"></div>
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=960&h=640&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=960&h=640&q=80" 
                 alt="Person writing on a laptop"
                 className="rounded-lg shadow-lg relative z-10 w-full h-auto object-cover"
               />

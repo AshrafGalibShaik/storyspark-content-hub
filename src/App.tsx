@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
 import PostPage from "./pages/PostPage";
+import WriteArticle from "./pages/WriteArticle";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/post/:slug" element={<PostPage />} />
+          <Route path="/write" element={<WriteArticle />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

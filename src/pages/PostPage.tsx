@@ -15,6 +15,7 @@ const PostPage = () => {
   const post = getPostBySlug(slug || '');
   const comments = post ? getCommentsByPostId(post.id) : [];
   const relatedPosts = getRecentPosts(3);
+  const placeholderImage = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80";
 
   useEffect(() => {
     // Scroll to top on page load
@@ -72,6 +73,11 @@ const PostPage = () => {
                 src={post.author.avatar || '/placeholder.svg'}
                 alt={post.author.name}
                 className="h-12 w-12 rounded-full object-cover mr-4"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = "/placeholder.svg";
+                }}
               />
               <div className="mr-auto">
                 <Link to={`/author/${post.author.id}`} className="text-navy font-medium hover:text-teal">
@@ -100,9 +106,14 @@ const PostPage = () => {
           {/* Featured Image */}
           <figure className="mb-10">
             <img
-              src={post.coverImage || '/placeholder.svg'}
+              src={post.coverImage || placeholderImage}
               alt={post.title}
               className="w-full max-h-96 object-cover rounded-lg"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = placeholderImage;
+              }}
             />
           </figure>
           

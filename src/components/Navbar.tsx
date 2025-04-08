@@ -1,16 +1,32 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Search, User } from 'lucide-react';
+import { Menu, X, Search, User, Edit } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="bg-cream border-b border-light-gray/30">
+    <header className={`bg-cream border-b border-light-gray/30 sticky top-0 z-50 ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
@@ -34,6 +50,12 @@ const Navbar: React.FC = () => {
                 <Link to="/login" className="flex items-center text-navy">
                   <User size={18} className="mr-2" />
                   Login
+                </Link>
+              </Button>
+              <Button variant="outline" asChild className="bg-white border-teal text-teal hover:bg-teal/10">
+                <Link to="/write" className="flex items-center">
+                  <Edit size={18} className="mr-2" />
+                  Write
                 </Link>
               </Button>
               <Button asChild className="bg-teal hover:bg-teal/90 text-white">
@@ -75,6 +97,14 @@ const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               About
+            </Link>
+            <Link 
+              to="/write" 
+              className="py-2 px-3 rounded-md bg-teal/10 text-teal flex items-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Edit size={18} className="mr-2" />
+              Write an Article
             </Link>
             <hr className="border-light-gray/30 my-2" />
             <div className="flex space-x-2">

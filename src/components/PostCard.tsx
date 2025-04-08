@@ -12,6 +12,9 @@ interface PostCardProps {
 }
 
 const PostCard: React.FC<PostCardProps> = ({ post, featured = false }) => {
+  // Default placeholder image URL
+  const placeholderImage = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80";
+
   return (
     <article 
       className={`overflow-hidden rounded-lg border border-light-gray/40 bg-white shadow-sm 
@@ -24,9 +27,14 @@ const PostCard: React.FC<PostCardProps> = ({ post, featured = false }) => {
         className={`block ${featured ? 'md:w-1/2' : 'w-full'} overflow-hidden`}
       >
         <img
-          src={post.coverImage || '/placeholder.svg'}
+          src={post.coverImage || placeholderImage}
           alt={post.title}
           className="h-60 w-full object-cover transition-transform duration-500 hover:scale-105"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = placeholderImage;
+          }}
         />
       </Link>
       
@@ -61,9 +69,14 @@ const PostCard: React.FC<PostCardProps> = ({ post, featured = false }) => {
           {/* Author and Date */}
           <div className="flex items-center mb-4">
             <img
-              src={post.author.avatar || '/placeholder.svg'}
+              src={post.author.avatar || `/placeholder.svg`}
               alt={post.author.name}
               className="h-9 w-9 rounded-full object-cover mr-3"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = "/placeholder.svg";
+              }}
             />
             <div>
               <p className="text-sm font-medium text-navy">{post.author.name}</p>
