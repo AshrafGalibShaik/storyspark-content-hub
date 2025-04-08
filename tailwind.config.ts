@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				navy: '#1a2b4c',
+				cream: '#f9f7f3',
+				teal: '#39a6a3',
+				'light-gray': '#e9ecef',
+				coral: '#e27d60',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +90,48 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Georgia', 'serif'],
+				mono: ['Menlo', 'Monaco', 'Courier New', 'monospace'],
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '65ch',
+						color: '#1a2b4c',
+						p: {
+							lineHeight: '1.75',
+						},
+						'h1, h2, h3': {
+							fontWeight: '700',
+							marginTop: '2em',
+							marginBottom: '1em',
+						},
+						blockquote: {
+							fontStyle: 'italic',
+							borderLeftColor: '#39a6a3',
+						},
+					},
+				},
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
