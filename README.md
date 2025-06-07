@@ -1,73 +1,57 @@
-# Welcome to your Lovable project
+## [StorySpark Content Hub](https://www.google.com/maps/search/StorySpark+Content+Hub)
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/eb6ef56d-88b9-4622-93f6-6822b9c7bd54
+# StorySpark Content Hub – README
 
-## How can I edit this code?
+Welcome to the **StorySpark Content Hub**, a platform designed to empower storytellers by providing tools and resources for creating inclusive and compelling narratives. This README offers an overview of the website's purpose, features, and usage guidelines.
 
-There are several ways of editing your application.
+## Overview
 
-**Use Lovable**
+The StorySpark Content Hub serves as a centralized resource for writers, directors, producers, and creative teams aiming to enhance the inclusivity and cultural relevance of their stories. By offering assessments and insights, the platform facilitates intentional conversations around authentic representation in storytelling.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/eb6ef56d-88b9-4622-93f6-6822b9c7bd54) and start prompting.
+## Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Inclusivity Assessment Tool**: A free, no-registration-required questionnaire that evaluates your project's inclusivity across six key dimensions, providing immediate, personalized insights and actionable recommendations.([getstoryspark.com][1])
 
-**Use your preferred IDE**
+* **User-Friendly Interface**: Designed for ease of use, the platform requires no script uploads or AI processing. Users simply answer 13 questions about their project to receive feedback.([getstoryspark.com][1])
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* **Versatile Application**: Suitable for various stages of the creative process, from initial writing to development and acquisition, and beneficial for roles including writers, producers, DEI consultants, and development teams.([getstoryspark.com][1])
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## How It Works
 
-Follow these steps:
+1. **Select a Project**: Choose a script or project you wish to assess.([getstoryspark.com][1])
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Complete the Questionnaire**: Answer 13 targeted questions focusing on different aspects of inclusivity in your story.([getstoryspark.com][1])
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Receive Insights**: Obtain a one-page summary highlighting your project's strengths and opportunities for enhancing inclusivity, along with practical recommendations.([getstoryspark.com][1])
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Benefits
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+* **Immediate Feedback**: Gain quick insights without the need for extensive setup or information submission.
 
-**Edit a file directly in GitHub**
+* **Enhanced Storytelling**: Identify areas to broaden your story's appeal and cultural resonance.([getstoryspark.com][1])
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+* **Support for Diverse Voices**: Encourages the inclusion of underrepresented groups, contributing to more authentic and diverse narratives.([getstoryspark.com][1])
 
-**Use GitHub Codespaces**
+## Getting Started
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+To begin using the StorySpark Content Hub:
 
-## What technologies are used for this project?
+1. Visit [https://storyspark-content-hub.vercel.app/](https://storyspark-content-hub.vercel.app/).
 
-This project is built with:
+2. Click on the "Launch the free tool" button.([getstoryspark.com][1])
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Follow the on-screen instructions to complete the assessment and receive your personalized insights.([getstoryspark.com][1])
 
-## How can I deploy this project?
+## Additional Resources
 
-Simply open [Lovable](https://lovable.dev/projects/eb6ef56d-88b9-4622-93f6-6822b9c7bd54) and click on Share -> Publish.
+For more information on inclusive storytelling and to access further tools, visit the main StorySpark website: [https://www.getstoryspark.com/](https://www.getstoryspark.com/).
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes it is!
+*Note: StorySpark is a free tool designed to support creative professionals in enhancing the inclusivity of their narratives. It does not store user data or require account creation, ensuring privacy and ease of access.*([getstoryspark.com][1])
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+[1]: https://www.getstoryspark.com/?utm_source=chatgpt.com "Story Spark"
